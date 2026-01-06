@@ -1,26 +1,182 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sparq Design System Colors */
+  --sparq-dark: #1A1A1A;
+  --sparq-orange: #E87A20;
+  --sparq-orange-hover: #D06A15;
+  --sparq-cream: #F5F0E8;
+  --sparq-cream-dark: #E8E0D4;
+  --sparq-white: #FFFFFF;
+  --sparq-gray-light: #F5F5F5;
+  --sparq-gray: #949494;
+  --sparq-gray-dark: #666666;
+  
+  /* Semantic colors */
+  --background: var(--sparq-dark);
+  --foreground: var(--sparq-white);
+  --background-light: var(--sparq-cream);
+  --foreground-dark: var(--sparq-dark);
+  --accent: var(--sparq-orange);
+  --accent-hover: var(--sparq-orange-hover);
 }
 
 @theme inline {
+  --color-sparq-dark: var(--sparq-dark);
+  --color-sparq-orange: var(--sparq-orange);
+  --color-sparq-orange-hover: var(--sparq-orange-hover);
+  --color-sparq-cream: var(--sparq-cream);
+  --color-sparq-cream-dark: var(--sparq-cream-dark);
+  --color-sparq-white: var(--sparq-white);
+  --color-sparq-gray-light: var(--sparq-gray-light);
+  --color-sparq-gray: var(--sparq-gray);
+  --color-sparq-gray-dark: var(--sparq-gray-dark);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-noto-sans);
+  --font-display: var(--font-playfair);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans), system-ui, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sparq-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sparq-gray-dark);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sparq-orange);
+}
+
+/* Animations */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(232, 122, 32, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(232, 122, 32, 0.6);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Typography utilities */
+.font-display {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Gradient backgrounds */
+.gradient-dark {
+  background: linear-gradient(180deg, var(--sparq-dark) 0%, #0D0D0D 100%);
+}
+
+.gradient-orange {
+  background: linear-gradient(135deg, var(--sparq-orange) 0%, #FF9D4D 100%);
+}
+
+/* Section transitions */
+.section-light {
+  background: var(--sparq-cream);
+  color: var(--sparq-dark);
+}
+
+.section-dark {
+  background: var(--sparq-dark);
+  color: var(--sparq-white);
+}
+
+/* Decorative line styles */
+.underline-orange {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-orange::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--sparq-orange);
+  border-radius: 2px;
 }
