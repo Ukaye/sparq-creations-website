@@ -1,9 +1,9 @@
 "use client";
 
-import { HTMLAttributes, forwardRef } from "react";
-import { motion } from "framer-motion";
+import { forwardRef } from "react";
+import { motion, type HTMLMotionProps } from "framer-motion";
 
-interface CardProps extends HTMLAttributes<HTMLDivElement> {
+interface CardProps extends HTMLMotionProps<"div"> {
   variant?: "dark" | "light" | "glass";
   hover?: boolean;
   children: React.ReactNode;
