@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import ServiceTicker from "@/components/ServiceTicker";
 
 const services = [
   {
@@ -180,8 +179,9 @@ export default function AboutPage() {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
+          {/* First 4 cards in 2-column grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {services.slice(0, 4).map((service, index) => (
               <motion.div
                 key={service.category}
                 initial={{ opacity: 0, y: 30 }}
@@ -189,6 +189,35 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h3 className="font-sans text-sm font-bold mb-3 text-sparq-orange">
+                  {service.category}
+                </h3>
+                <ul className="space-y-1.5">
+                  {service.items.map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sparq-gray-dark text-sm"
+                    >
+                      <span className="text-sparq-orange mt-1.5 text-xs">•</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+          
+          {/* Last card centered */}
+          <div className="flex justify-center mt-6 max-w-4xl mx-auto">
+            {services.slice(4).map((service, index) => (
+              <motion.div
+                key={service.category}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow w-full md:w-1/2"
               >
                 <h3 className="font-sans text-sm font-bold mb-3 text-sparq-orange">
                   {service.category}
@@ -305,9 +334,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Service Ticker */}
-      <ServiceTicker variant="dark" />
     </>
   );
 }
