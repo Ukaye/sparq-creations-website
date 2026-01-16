@@ -228,110 +228,13 @@ export default function Home() {
               className="flex-1 relative w-full"
             >
               <div className="relative w-full max-w-lg mx-auto aspect-square">
-                {/* Africa map image */}
+                {/* Africa map image with labels included */}
                 <Image
                   src="/images/africa-vector-map.png"
-                  alt="Africa map"
+                  alt="Africa map with service categories"
                   fill
-                  className="object-contain opacity-60"
+                  className="object-contain"
                 />
-                
-                {/* Floating Service Labels */}
-                {/* Top - Corporate Branding */}
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 }}
-                  className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Corporate Branding</span>
-                </motion.div>
-
-                {/* Top Right - B2B & Growth Strategy */}
-                <motion.div
-                  initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 }}
-                  className="absolute top-[15%] right-0 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">B2B & Growth Strategy</span>
-                </motion.div>
-
-                {/* Right - Tech/Data Companies */}
-                <motion.div
-                  initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4 }}
-                  className="absolute top-[35%] -right-4 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Tech/Data Companies</span>
-                </motion.div>
-
-                {/* Bottom Right - Brand Strategy & Identity */}
-                <motion.div
-                  initial={{ opacity: 0, x: 10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 }}
-                  className="absolute top-[55%] -right-8 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Brand Strategy & Identity</span>
-                </motion.div>
-
-                {/* Bottom - Small Business Support */}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6 }}
-                  className="absolute bottom-[10%] right-[10%] flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Small Business Support</span>
-                </motion.div>
-
-                {/* Left Bottom - Beauty, Wellness & Lifestyle */}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.7 }}
-                  className="absolute bottom-[20%] -left-4 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Beauty, Wellness & Lifestyle</span>
-                </motion.div>
-
-                {/* Left - Non-Profits & Social Enterprises */}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.8 }}
-                  className="absolute top-[40%] -left-8 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap text-center">Non-Profits &<br/>Social Enterprises</span>
-                </motion.div>
-
-                {/* Top Left - Food & Beverage */}
-                <motion.div
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.9 }}
-                  className="absolute top-[15%] left-0 flex flex-col items-center"
-                >
-                  <span className="text-[#E87A20] text-xs mb-1">✦</span>
-                  <span className="text-white text-xs font-medium whitespace-nowrap">Food & Beverage</span>
-                </motion.div>
               </div>
             </motion.div>
           </div>
