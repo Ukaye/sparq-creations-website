@@ -4,7 +4,12 @@ import { ButtonHTMLAttributes, forwardRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBaseProps = Omit<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration"
+>;
+
+interface ButtonProps extends ButtonBaseProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
