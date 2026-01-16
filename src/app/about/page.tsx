@@ -264,8 +264,8 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          {/* Process Steps - Zigzag Layout */}
-          <div className="relative max-w-4xl mx-auto">
+          {/* Process Steps - Zigzag Layout with Cards */}
+          <div className="relative max-w-4xl mx-auto space-y-6">
             {processSteps.map((step, index) => (
               <motion.div
                 key={step.number}
@@ -273,27 +273,32 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className={`flex items-start gap-6 mb-8 ${
-                  index % 2 === 0 ? "" : "md:flex-row-reverse md:text-right"
+                className={`flex ${
+                  index % 2 === 0 ? "justify-start" : "justify-end"
                 }`}
               >
-                {/* Icon Box */}
-                <div className="flex-shrink-0 w-16 h-16 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#E87A20" strokeWidth="2">
-                    {index === 0 && <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>}
-                    {index === 1 && <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></>}
-                    {index === 2 && <><path d="M12 2v8l4 4"/><circle cx="12" cy="14" r="8"/></>}
-                    {index === 3 && <><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></>}
-                    {index === 4 && <><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></>}
-                  </svg>
-                </div>
+                {/* Card */}
+                <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 max-w-sm ${
+                  index % 2 === 0 ? "" : "text-right"
+                }`}>
+                  {/* Icon Box */}
+                  <div className={`w-14 h-14 bg-sparq-dark border border-sparq-orange/30 rounded-xl flex items-center justify-center mb-4 ${
+                    index % 2 === 0 ? "" : "ml-auto"
+                  }`}>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E87A20" strokeWidth="1.5">
+                      {index === 0 && <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>}
+                      {index === 1 && <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></>}
+                      {index === 2 && <><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></>}
+                      {index === 3 && <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></>}
+                      {index === 4 && <><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m17.07-7.07l-1.41 1.41M6.34 17.66l-1.41 1.41m12.02 0l-1.41-1.41M6.34 6.34L4.93 4.93"/></>}
+                    </svg>
+                  </div>
 
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="font-display text-base font-bold text-sparq-orange mb-1">
+                  {/* Content */}
+                  <h3 className="font-display text-lg font-bold text-sparq-orange mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sparq-gray text-sm">{step.description}</p>
+                  <p className="text-sparq-gray text-sm leading-relaxed">{step.description}</p>
                 </div>
               </motion.div>
             ))}

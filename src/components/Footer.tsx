@@ -94,7 +94,7 @@ export default function Footer() {
       </div>
 
       {/* Large Brand Name */}
-      <div className="py-10 overflow-hidden">
+      <div className="py-12 overflow-hidden">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -103,13 +103,11 @@ export default function Footer() {
           className="container mx-auto px-6 lg:px-12"
         >
           <h3 
-            className="text-center"
+            className="text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold"
             style={{
               fontFamily: 'var(--font-hanken-grotesk), sans-serif',
-              fontWeight: 800,
-              fontSize: '100px',
               lineHeight: '100%',
-              letterSpacing: '0%',
+              letterSpacing: '-0.02em',
               background: 'linear-gradient(90deg, #F88A21 0%, #D76B10 50%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -118,7 +116,7 @@ export default function Footer() {
           >
             SPARQ CREATIONS
           </h3>
-          <p className="text-center text-sparq-gray/50 text-xs mt-3 italic">
+          <p className="text-center text-sparq-gray/50 text-sm mt-4 italic">
             Creating Authentic Connection...........
           </p>
         </motion.div>

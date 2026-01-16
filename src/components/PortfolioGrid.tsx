@@ -65,13 +65,24 @@ export default function PortfolioGrid({
         </div>
       )}
 
-      {/* Projects Grid */}
+      {/* Projects Grid - Masonry Style */}
       <motion.div
         layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"
+        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[200px]"
       >
         <AnimatePresence mode="popLayout">
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.map((project, index) => {
+            // Create varied masonry layout based on index
+            const getGridSpan = (i: number) => {
+              // Large items (span 2 rows)
+              if (i === 0 || i === 4 || i === 8 || i === 12) return "row-span-2";
+              // Wide items (span 2 cols on medium+)
+              if (i === 2 || i === 7 || i === 11) return "md:col-span-2";
+              // Normal items
+              return "";
+            };
+            
+            return (
             <motion.div
               key={project.id}
               layout
@@ -79,13 +90,11 @@ export default function PortfolioGrid({
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3, delay: index * 0.05 }}
-              className={`relative group cursor-pointer overflow-hidden rounded-xl ${
-                index === 0 || index === 5 ? "sm:col-span-2 sm:row-span-2" : ""
-              }`}
+              className={`relative group cursor-pointer overflow-hidden rounded-lg ${getGridSpan(index)}`}
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}
-              <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-sparq-gray-dark to-sparq-dark">
+              <div className="relative h-full overflow-hidden bg-gradient-to-br from-sparq-gray-dark to-sparq-dark">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -141,7 +150,8 @@ export default function PortfolioGrid({
                 </svg>
               </div>
             </motion.div>
-          ))}
+            );
+          })}
         </AnimatePresence>
       </motion.div>
 
