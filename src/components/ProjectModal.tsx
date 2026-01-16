@@ -87,6 +87,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                   alt={project.title}
                   fill
                   className="object-cover"
+                  quality={80}
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
                 {/* Category Tag */}
@@ -150,6 +151,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                           alt={relatedProject.title}
                           fill
                           className="object-cover transition-transform duration-300 group-hover:scale-110"
+                          quality={70}
                           sizes="100px"
                         />
                         <div className="absolute inset-0 bg-sparq-dark/40 group-hover:bg-sparq-dark/60 transition-colors" />

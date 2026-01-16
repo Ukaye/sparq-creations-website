@@ -100,6 +100,7 @@ export default function PortfolioGrid({
                   alt={project.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  quality={70}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;

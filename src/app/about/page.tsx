@@ -248,6 +248,8 @@ export default function AboutPage() {
             alt="Office"
             fill
             className="object-cover"
+            quality={70}
+            sizes="100vw"
           />
           <div className="absolute inset-0 bg-sparq-dark/85" />
         </div>

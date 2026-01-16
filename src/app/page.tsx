@@ -107,6 +107,8 @@ export default function Home() {
                     height={614}
                     className="object-cover object-center"
                     style={{ width: '480px', height: '614px' }}
+                    quality={80}
+                    sizes="(max-width: 1024px) 100vw, 480px"
                     priority
                   />
                 </div>
@@ -150,6 +152,7 @@ export default function Home() {
                 alt="Selected Works Collage"
                 fill
                 className="object-contain transition-transform duration-300 group-hover:scale-105"
+                quality={75}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 priority
               />
@@ -234,6 +237,8 @@ export default function Home() {
                   alt="Africa map with service categories"
                   fill
                   className="object-contain"
+                  quality={80}
+                  sizes="(max-width: 1024px) 100vw, 520px"
                 />
               </div>
             </motion.div>
