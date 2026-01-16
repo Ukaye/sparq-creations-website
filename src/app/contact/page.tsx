@@ -162,9 +162,12 @@ export default function ContactPage() {
               className="text-center mb-8"
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-sparq-orange/20 rounded-full text-sparq-orange text-sm font-medium mb-4">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                  <circle cx="8" cy="8" r="3" />
-                </svg>
+                <Image
+                  src="/images/icon.svg"
+                  alt=""
+                  width={16}
+                  height={16}
+                />
                 Contact Us
               </span>
               <p className="text-sparq-gray-dark text-sm md:text-base">

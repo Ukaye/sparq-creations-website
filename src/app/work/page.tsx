@@ -42,7 +42,7 @@ export default function WorkPage() {
               transition={{ duration: 0.6 }}
               className="max-w-md"
             >
-              <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-sparq-dark mb-4">
+              <h1 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-sparq-dark mb-4">
                 <span className="text-sparq-orange">Our Work:</span>{" "}
                 <span className="font-normal">The Proof is in the Process</span>
               </h1>
@@ -106,13 +106,23 @@ export default function WorkPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-sparq-cream rounded-xl p-5 text-center"
+                className="rounded-xl p-5 text-center"
+                style={{
+                  background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
+                  boxShadow: "0px 4px 4px 0px #00000040",
+                }}
                 >
-                  <span className="text-sparq-orange text-xl mb-2 block">✦</span>
-                  <h3 className="font-sans text-base font-bold text-sparq-dark mb-1">
+                  <Image
+                    src="/images/icon.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className="mx-auto mb-2"
+                  />
+                  <h3 className="font-sans text-base font-bold text-sparq-white mb-1">
                     {value.title}
                   </h3>
-                  <p className="text-sparq-gray-dark text-xs">{value.description}</p>
+                  <p className="text-sparq-gray text-xs">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -126,13 +136,23 @@ export default function WorkPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (index + 3) * 0.1 }}
-                  className="bg-sparq-cream rounded-xl p-5 text-center"
+                className="rounded-xl p-5 text-center"
+                style={{
+                  background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
+                  boxShadow: "0px 4px 4px 0px #00000040",
+                }}
                 >
-                  <span className="text-sparq-orange text-xl mb-2 block">✦</span>
-                  <h3 className="font-sans text-base font-bold text-sparq-dark mb-1">
+                  <Image
+                    src="/images/icon.svg"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className="mx-auto mb-2"
+                  />
+                  <h3 className="font-sans text-base font-bold text-sparq-white mb-1">
                     {value.title}
                   </h3>
-                  <p className="text-sparq-gray-dark text-xs">{value.description}</p>
+                  <p className="text-sparq-gray text-xs">{value.description}</p>
                 </motion.div>
               ))}
             </div>

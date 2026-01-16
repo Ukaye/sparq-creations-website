@@ -31,7 +31,7 @@ export default function ServiceTicker({ variant = "dark", speed = 30 }: ServiceT
       className={`${borderColor} border-y py-4 overflow-hidden`}
       style={{
         background: "linear-gradient(90deg, #E5FAFB 0.81%, #D1B686 25%, #F4ECBA 50%, #F6CAA2 75%, #E5FAFB 100%)",
-        transform: "rotate(-5deg)",
+        transform: "rotate(0deg)",
       }}
     >
       <motion.div

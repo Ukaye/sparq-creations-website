@@ -94,7 +94,7 @@ export default function PortfolioGrid({
               onClick={() => setSelectedProject(project)}
             >
               {/* Image */}
-              <div className="relative h-full overflow-hidden bg-gradient-to-br from-sparq-gray-dark to-sparq-dark">
+              <div className="relative h-full overflow-hidden bg-sparq-dark">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -106,12 +106,6 @@ export default function PortfolioGrid({
                     target.style.display = 'none';
                   }}
                 />
-                {/* Fallback gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-sparq-orange/20 via-sparq-dark to-sparq-dark flex items-center justify-center">
-                  <span className="text-4xl opacity-30">✦</span>
-                </div>
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-sparq-dark via-sparq-dark/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
               </div>
 
               {/* Category Tag */}

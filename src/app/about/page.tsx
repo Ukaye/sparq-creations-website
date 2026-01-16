@@ -112,7 +112,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 bg-sparq-dark overflow-hidden min-h-[40vh] flex items-center">
+      <section className="relative pt-50 pb-24 bg-sparq-dark overflow-hidden min-h-[40vh] flex items-center">
         {/* Decorative elements */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -307,21 +307,39 @@ export default function AboutPage() {
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
                   className={`relative flex ${
-                    index % 2 === 0 ? "justify-start md:pr-[52%]" : "justify-end md:pl-[52%]"
+                    index % 2 === 0 ? "justify-start md:pr-[60%]" : "justify-end md:pl-[60%]"
                   }`}
                 >
-                  {/* Timeline Dot */}
-                  <div className="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-sparq-orange border-4 border-sparq-dark hidden md:block" style={{ transform: 'translateX(-50%)' }} />
-                  
-                  {/* Horizontal Connector Line */}
-                  <div className={`absolute top-8 h-px bg-sparq-orange/30 hidden md:block ${
-                    index % 2 === 0 ? "left-[calc(50%+8px)] right-auto w-[calc(48%-16px)]" : "right-[calc(50%+8px)] left-auto w-[calc(48%-16px)]"
-                  }`} style={{ 
-                    borderTop: '2px dashed rgba(232, 122, 32, 0.3)'
-                  }} />
+                {/* Timeline Icon */}
+                <div
+                  className="absolute left-1/2 top-1/2 hidden md:block"
+                  style={{ transform: "translate(-50%, -50%)" }}
+                >
+                  <Image
+                    src="/images/icon.svg"
+                    alt="Timeline marker"
+                    width={48}
+                    height={48}
+                    className="opacity-80"
+                  />
+                </div>
+                
+                {/* Horizontal Connector Line */}
+                <div
+                  className={`absolute top-1/2 hidden md:block ${
+                    index % 2 === 0
+                      ? "right-[calc(50%+24px)] left-auto"
+                      : "left-[calc(50%+24px)] right-auto"
+                  }`}
+                  style={{
+                    transform: "translateY(-50%)",
+                    width: "clamp(40px, 8vw, 120px)",
+                    borderTop: "2px solid rgba(232, 122, 32, 0.3)",
+                  }}
+                />
                   
                   {/* Card */}
-                  <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 w-full md:max-w-sm ${
+                  <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 w-full md:max-w-[320px] ${
                     index % 2 === 0 ? "" : "text-right"
                   }`}>
                     {/* Icon Box */}
