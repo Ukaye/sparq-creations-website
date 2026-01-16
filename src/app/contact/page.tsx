@@ -194,7 +194,7 @@ export default function ContactPage() {
                     />
                   </svg>
                 </div>
-                <h2 className="font-display text-2xl font-bold text-sparq-dark mb-2">
+                <h2 className="font-sans text-2xl font-bold text-sparq-dark mb-2">
                   Message Sent!
                 </h2>
                 <p className="text-sparq-gray-dark mb-6">

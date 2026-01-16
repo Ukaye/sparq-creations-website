@@ -89,7 +89,7 @@ export default function WorkPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-sparq-white">
+            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-white">
               Our Brand{" "}
               <span className="text-sparq-orange">Values</span>
             </h2>
@@ -109,7 +109,7 @@ export default function WorkPage() {
                   className="bg-sparq-cream rounded-xl p-5 text-center"
                 >
                   <span className="text-sparq-orange text-xl mb-2 block">✦</span>
-                  <h3 className="font-display text-base font-bold text-sparq-dark mb-1">
+                  <h3 className="font-sans text-base font-bold text-sparq-dark mb-1">
                     {value.title}
                   </h3>
                   <p className="text-sparq-gray-dark text-xs">{value.description}</p>
@@ -129,7 +129,7 @@ export default function WorkPage() {
                   className="bg-sparq-cream rounded-xl p-5 text-center"
                 >
                   <span className="text-sparq-orange text-xl mb-2 block">✦</span>
-                  <h3 className="font-display text-base font-bold text-sparq-dark mb-1">
+                  <h3 className="font-sans text-base font-bold text-sparq-dark mb-1">
                     {value.title}
                   </h3>
                   <p className="text-sparq-gray-dark text-xs">{value.description}</p>
@@ -160,10 +160,10 @@ export default function WorkPage() {
             viewport={{ once: true }}
             className="max-w-md mx-auto text-center bg-sparq-dark/90 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
-            <h2 className="font-display text-xl md:text-2xl font-bold text-sparq-white mb-1">
+            <h2 className="font-sans text-xl md:text-2xl font-bold text-sparq-white mb-1">
               Ready to Make your Brand
             </h2>
-            <h3 className="font-display text-xl md:text-2xl font-bold text-sparq-orange mb-6">
+            <h3 className="font-sans text-xl md:text-2xl font-bold text-sparq-orange mb-6">
               Unforgettable?
             </h3>
             <Button href="/contact" variant="primary" size="md">

@@ -175,7 +175,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-sparq-dark">
+            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-dark">
               WHAT WE DO
             </h2>
           </motion.div>
@@ -190,7 +190,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.1 }}
                 className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="font-display text-sm font-bold mb-3 text-sparq-orange">
+                <h3 className="font-sans text-sm font-bold mb-3 text-sparq-orange">
                   {service.category}
                 </h3>
                 <ul className="space-y-1.5">
@@ -234,7 +234,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.2 }}
                 className="text-center"
               >
-                <h3 className="font-display text-sm font-bold text-sparq-orange mb-3 tracking-wider">
+                <h3 className="font-sans text-sm font-bold text-sparq-orange mb-3 tracking-wider">
                   {value.title}
                 </h3>
                 <p className="text-sparq-gray text-sm leading-relaxed">
@@ -255,7 +255,7 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-sparq-white mb-3">
+            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-white mb-3">
               Our Approach:{" "}
               <span className="text-sparq-orange">Clarity</span> in Every Step
             </h2>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                   </div>
 
                   {/* Content */}
-                  <h3 className="font-display text-lg font-bold text-sparq-orange mb-2">
+                  <h3 className="font-sans text-lg font-bold text-sparq-orange mb-2">
                     {step.title}
                   </h3>
                   <p className="text-sparq-gray text-sm leading-relaxed">{step.description}</p>

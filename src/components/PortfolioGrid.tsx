@@ -123,7 +123,7 @@ export default function PortfolioGrid({
 
               {/* Title Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <h3 className="font-display text-lg font-bold text-white mb-1">
+                <h3 className="font-sans text-lg font-bold text-white mb-1">
                   {project.title}
                 </h3>
                 <p className="text-sm text-sparq-gray-light opacity-0 group-hover:opacity-100 transition-opacity duration-300">
