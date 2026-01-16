@@ -1,15 +1,10 @@
 "use client";
 
-import { ButtonHTMLAttributes, forwardRef } from "react";
-import { motion } from "framer-motion";
+import { forwardRef } from "react";
+import { motion, type HTMLMotionProps } from "framer-motion";
 import Link from "next/link";
 
-type ButtonBaseProps = Omit<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  "onAnimationStart" | "onAnimationEnd" | "onAnimationIteration"
->;
-
-interface ButtonProps extends ButtonBaseProps {
+interface ButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
