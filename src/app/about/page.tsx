@@ -112,7 +112,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-28 pb-16 bg-sparq-dark overflow-hidden">
+      <section className="relative pt-32 pb-24 bg-sparq-dark overflow-hidden min-h-[40vh] flex items-center">
         {/* Decorative elements */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -293,44 +293,59 @@ export default function AboutPage() {
             </p>
           </motion.div>
 
-          {/* Process Steps - Zigzag Layout with Cards */}
-          <div className="relative max-w-4xl mx-auto space-y-6">
-            {processSteps.map((step, index) => (
-              <motion.div
-                key={step.number}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className={`flex ${
-                  index % 2 === 0 ? "justify-start" : "justify-end"
-                }`}
-              >
-                {/* Card */}
-                <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 max-w-sm ${
-                  index % 2 === 0 ? "" : "text-right"
-                }`}>
-                  {/* Icon Box */}
-                  <div className={`w-14 h-14 bg-sparq-dark border border-sparq-orange/30 rounded-xl flex items-center justify-center mb-4 ${
-                    index % 2 === 0 ? "" : "ml-auto"
+          {/* Process Steps - Zigzag Layout with Cards and Timeline */}
+          <div className="relative max-w-4xl mx-auto">
+            {/* Vertical Timeline Line */}
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sparq-orange/20 via-sparq-orange/40 to-sparq-orange/20 hidden md:block" style={{ transform: 'translateX(-50%)' }} />
+            
+            <div className="space-y-8 md:space-y-12">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={step.number}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.15 }}
+                  className={`relative flex ${
+                    index % 2 === 0 ? "justify-start md:pr-[52%]" : "justify-end md:pl-[52%]"
+                  }`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 top-6 w-4 h-4 rounded-full bg-sparq-orange border-4 border-sparq-dark hidden md:block" style={{ transform: 'translateX(-50%)' }} />
+                  
+                  {/* Horizontal Connector Line */}
+                  <div className={`absolute top-8 h-px bg-sparq-orange/30 hidden md:block ${
+                    index % 2 === 0 ? "left-[calc(50%+8px)] right-auto w-[calc(48%-16px)]" : "right-[calc(50%+8px)] left-auto w-[calc(48%-16px)]"
+                  }`} style={{ 
+                    borderTop: '2px dashed rgba(232, 122, 32, 0.3)'
+                  }} />
+                  
+                  {/* Card */}
+                  <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 w-full md:max-w-sm ${
+                    index % 2 === 0 ? "" : "text-right"
                   }`}>
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E87A20" strokeWidth="1.5">
-                      {index === 0 && <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>}
-                      {index === 1 && <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></>}
-                      {index === 2 && <><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></>}
-                      {index === 3 && <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></>}
-                      {index === 4 && <><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m17.07-7.07l-1.41 1.41M6.34 17.66l-1.41 1.41m12.02 0l-1.41-1.41M6.34 6.34L4.93 4.93"/></>}
-                    </svg>
-                  </div>
+                    {/* Icon Box */}
+                    <div className={`w-14 h-14 bg-sparq-dark border border-sparq-orange/30 rounded-xl flex items-center justify-center mb-4 ${
+                      index % 2 === 0 ? "" : "ml-auto"
+                    }`}>
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E87A20" strokeWidth="1.5">
+                        {index === 0 && <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>}
+                        {index === 1 && <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></>}
+                        {index === 2 && <><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></>}
+                        {index === 3 && <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></>}
+                        {index === 4 && <><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m17.07-7.07l-1.41 1.41M6.34 17.66l-1.41 1.41m12.02 0l-1.41-1.41M6.34 6.34L4.93 4.93"/></>}
+                      </svg>
+                    </div>
 
-                  {/* Content */}
-                  <h3 className="font-sans text-lg font-bold text-sparq-orange mb-2">
-                    {step.title}
-                  </h3>
-                  <p className="text-sparq-gray text-sm leading-relaxed">{step.description}</p>
-                </div>
-              </motion.div>
-            ))}
+                    {/* Content */}
+                    <h3 className="font-sans text-lg font-bold text-sparq-orange mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-sparq-gray text-sm leading-relaxed">{step.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
