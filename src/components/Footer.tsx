@@ -63,11 +63,11 @@ export default function Footer() {
               <span>+2348129423447</span>
             </a>
             <a
-              href="mailto:sparqcreationplaceholder.com"
+              href="mailto:info@sparqcreations.org"
               className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sparq-white transition-colors"
             >
               <EmailIcon />
-              <span>sparqcreationplaceholder.com</span>
+              <span>info@sparqcreations.org</span>
             </a>
           </div>
         </div>
