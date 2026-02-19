@@ -57,55 +57,58 @@ export default function ContactPage() {
   return (
     <>
       {/* Contact Form Section */}
-      <section className="relative min-h-screen pt-28 pb-12 bg-sparq-cream overflow-hidden">
+      <section
+        className="relative min-h-screen pt-28 pb-12 overflow-hidden"
+        style={{
+          background: "linear-gradient(90deg, #D1B686 25%, #F4ECBA 50%)",
+        }}
+      >
         {/* Decorative elements */}
-        
+
         {/* Swirl/Loop decoration - top left */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
+          animate={{ opacity: 0.9 }}
           transition={{ delay: 0.2 }}
-          className="absolute top-32 left-8 md:left-16 w-16 h-20"
+          className="absolute top-50 left-8 md:left-25 w-40 h-40"
         >
           <Image
-            src="/images/vectors/vector1.svg"
+            src="/images/vectors/vector2.svg"
             alt=""
             fill
             className="object-contain"
           />
         </motion.div>
 
-        {/* Paper plane - left side */}
+        {/* Curvy arrow - bottom left */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.4 }}
-          className="absolute top-1/3 left-8 md:left-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.9 }}
+          transition={{ delay: 0.6 }}
+          className="absolute bottom-70 left-12 md:left-40 w-20 h-16"
         >
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-            <path
-              d="M5 30L55 5L40 55L30 35L5 30Z"
-              stroke="#E87A20"
-              strokeWidth="2"
-              fill="none"
-              strokeLinejoin="round"
-            />
-            <path d="M30 35L55 5" stroke="#E87A20" strokeWidth="2" />
-          </svg>
+          <Image
+            src="/images/vectors/vector9.svg"
+            alt=""
+            fill
+            className="object-contain rotate-50"
+
+          />
         </motion.div>
 
         {/* Curvy arrow - bottom left */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.6 }}
+          animate={{ opacity: 0.9 }}
           transition={{ delay: 0.6 }}
-          className="absolute bottom-32 left-12 md:left-24 w-20 h-16"
+          className="absolute bottom-9 left-12 md:left-30 w-30 h-30"
         >
           <Image
-            src="/images/vectors/vector11.svg"
+            src="/images/vectors/vector8.svg"
             alt=""
             fill
-            className="object-contain"
+            className="object-contain rotate-50"
+
           />
         </motion.div>
 
@@ -114,13 +117,14 @@ export default function ContactPage() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="absolute top-28 right-12 md:right-24"
+          className="absolute top-40 right-12 md:right-24 w-30 h-30"
         >
-          <svg width="60" height="80" viewBox="0 0 60 80" fill="none">
-            <path d="M30 0L32 12L40 15L32 18L30 30L28 18L20 15L28 12L30 0Z" fill="#E87A20" opacity="0.8"/>
-            <path d="M50 20L51 26L55 28L51 30L50 36L49 30L45 28L49 26L50 20Z" fill="#E87A20" opacity="0.6"/>
-            <path d="M45 50L46 54L49 55L46 56L45 60L44 56L41 55L44 54L45 50Z" fill="#E87A20" opacity="0.4"/>
-          </svg>
+          <Image
+            src="/images/vectors/vector4.svg"
+            alt=""
+            fill
+            className="object-contain"
+          />
         </motion.div>
 
         {/* Small sparkle - right side */}
@@ -128,51 +132,51 @@ export default function ContactPage() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
-          className="absolute top-1/2 right-16 md:right-28"
+          className="absolute top-1/2 right-16 md:right-28 w-20 h-20"
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="#E87A20" opacity="0.5">
-            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-          </svg>
+          <Image
+            src="/images/vectors/vector10.svg"
+            alt=""
+            fill
+            className="object-contain"
+          />
         </motion.div>
 
         {/* Squiggle - bottom right */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
+          animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
-          className="absolute bottom-40 right-12 md:right-20"
+          className="absolute bottom-5 right-12 md:right-40 w-30 h-30"
         >
-          <svg width="60" height="40" viewBox="0 0 60 40" fill="none">
-            <path
-              d="M5 20 Q15 5 25 20 Q35 35 45 20 Q55 5 55 20"
-              stroke="#E87A20"
-              strokeWidth="2"
-              strokeLinecap="round"
-              fill="none"
-            />
-          </svg>
+          <Image
+            src="/images/vectors/vector8.svg"
+            alt=""
+            fill
+            className="object-contain rotate-200"
+          />
         </motion.div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="max-w-xl mx-auto">
+        <div className="container mx-auto px-6 lg:px-20 relative z-10">
+          <div className="max-w-3xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-center mb-8"
+              className="text-center mb-8 mt-20"
             >
-              <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-sparq-orange/20 rounded-full text-sparq-orange text-sm font-medium mb-4">
+              <span className="inline-flex items-center gap-2 px-8 py-2 bg-[#F2F2F099] border-1 border-sparq-orange/60 rounded-full text-sparq-orange text-xl font-medium mb-10">
                 <Image
                   src="/images/icon.svg"
                   alt=""
-                  width={16}
-                  height={16}
+                  width={24}
+                  height={24}
                 />
                 Contact Us
               </span>
-              <p className="text-sparq-gray-dark text-sm md:text-base">
-                Every great brand begins with clarity. Start with a strategy session, and let&apos;s
-                uncover how your business can stand out, connect, and scale.
+              <p className="font-noto-sans text-[#101010] text-sm md:text-xl font-normal">
+                Every great brand begins with clarity. Start with a strategy session, <br />
+                and let&apos;s uncover how your business can stand out, connect, and scale.
               </p>
             </motion.div>
 

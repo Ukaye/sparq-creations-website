@@ -17,14 +17,14 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="block text-sm font-medium text-sparq-gray mb-2">
+          <label className="font-noto-sans block text-lg font-medium text-[#101010] mb-2">
             {label}
           </label>
         )}
         <input
           ref={ref}
-          className={`w-full px-4 py-3 bg-white border border-sparq-gray/30 rounded-lg
-            text-sparq-dark placeholder:text-sparq-gray
+          className={`w-full px-5 py-4 bg-white border border-sparq-gray/10 rounded-lg
+            text-sparq-dark placeholder:text-[#101010]/80
             focus:outline-none focus:ring-2 focus:ring-sparq-orange focus:border-transparent
             transition-all duration-300
             ${error ? "border-red-500" : ""}
@@ -52,8 +52,8 @@ export const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         )}
         <textarea
           ref={ref}
-          className={`w-full px-4 py-3 bg-white border border-sparq-gray/30 rounded-lg
-            text-sparq-dark placeholder:text-sparq-gray
+          className={`w-full px-5 py-4 bg-white border border-sparq-gray/10 rounded-lg
+            text-sparq-dark placeholder:text-[#101010]/80
             focus:outline-none focus:ring-2 focus:ring-sparq-orange focus:border-transparent
             transition-all duration-300 resize-none
             ${error ? "border-red-500" : ""}
