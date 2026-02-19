@@ -1,27 +1,40 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui";
 
 const socialLinks = [
-  { 
-    name: "Instagram", 
+  {
+    name: "Instagram",
     href: "https://instagram.com/sparqcreations",
-    icon: InstagramIcon 
+    icon: InstagramIcon
   },
-  { 
-    name: "LinkedIn", 
+  {
+    name: "LinkedIn",
     href: "https://linkedin.com/company/sparqcreations",
-    icon: LinkedInIcon 
+    icon: LinkedInIcon
   },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-sparq-dark">
+    <footer className="bg-[#181818] relative overflow-hidden">
+      {/* Decorative Circle */}
+      <div
+        className="absolute top-28 left-1/2 w-[300px] h-[300px] opacity-50 pointer-events-none"
+        style={{
+          background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+          transform: 'translate(-50%, -20%)',
+          zIndex: 0,
+          filter: 'blur(80px)',
+        }}
+      />
+
       {/* CTA Section */}
-      <section className="pt-16 pb-8">
+      <section className="pt-16 mt-10 pb-8">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -30,13 +43,13 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="text-center mx-auto"
           >
-            <h2 className="font-sans font-bold text-sparq-white mb-4 text-center" style={{ fontSize: '52px', fontWeight: 700, lineHeight: '100%', letterSpacing: '0%' }}>
-              Let&apos;s Help you Build a Brand That{" "}
+            <h2 className="font-sans font-bold text-[#F2F2F0] mb-10 text-center" style={{ fontSize: '52px', fontWeight: 700, lineHeight: '100%', letterSpacing: '0%' }}>
+              Let&apos;s Help you Build a Brand That <br />
               Sparks Loyalty and Unlock Growth.
             </h2>
-            <p className="text-sparq-gray text-sm mb-4">
+            <p className="text-[#F2F2F0] font-normal text-lg -mb-2">
               Every conversation starts with clarity. Book a free discovery session{" "}
-              <span className="text-sparq-orange font-semibold">TODAY</span>.
+              <span className="text-[#F3851F] font-semibold">TODAY</span>.
             </p>
           </motion.div>
         </div>
@@ -45,26 +58,26 @@ export default function Footer() {
       {/* Contact Info */}
       <div>
         <div className="container mx-auto px-6 lg:px-12 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-sm">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 font-medium text-lg">
             <a
               href="https://maps.google.com/?q=73+Allen+Avenue+Lagos+NG"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sparq-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#181818] text-[#F2F2F0] transition-colors"
             >
               <LocationIcon />
               <span>73 Allen Avenue, Lagos, NG</span>
             </a>
             <a
               href="tel:+2348129423447"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sparq-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#181818] text-[#F2F2F0] transition-colors"
             >
               <PhoneIcon />
               <span>+2348129423447</span>
             </a>
             <a
               href="mailto:info@sparqcreations.org"
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-sparq-white transition-colors"
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#181818] text-[#F2F2F0] transition-colors"
             >
               <EmailIcon />
               <span>info@sparqcreations.org</span>
@@ -83,10 +96,10 @@ export default function Footer() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors group"
+                className="w-16 h-16 flex items-center justify-center rounded-full bg-[#181818] text-[#F2F2F0] transition-colors group"
                 aria-label={social.name}
               >
-                <social.icon className="w-4 h-4 text-sparq-white group-hover:text-sparq-orange" />
+                <social.icon className="w-6 h-6 text-[#F2F2F0]" />
               </a>
             ))}
           </div>
@@ -102,7 +115,7 @@ export default function Footer() {
           transition={{ duration: 1 }}
           className="container mx-auto px-6 lg:px-12"
         >
-          <h3 
+          <h3
             className="text-center text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-extrabold"
             style={{
               fontFamily: 'var(--font-hanken-grotesk), sans-serif',
@@ -112,11 +125,12 @@ export default function Footer() {
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
+              opacity: 0.5
             }}
           >
             SPARQ CREATIONS
           </h3>
-          <p className="text-center text-sparq-gray/50 text-sm mt-4 italic">
+          <p className="text-center text-[#8D8B88] text-sm mt-4 italic">
             Creating Authentic Connection...........
           </p>
         </motion.div>
@@ -157,10 +171,16 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
+
 function LinkedInIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-    </svg>
+    <div className={`relative ${className}`}>
+      <Image
+        src="/images/linkedin.png"
+        alt="LinkedIn"
+        fill
+        className="object-contain"
+      />
+    </div>
   );
 }

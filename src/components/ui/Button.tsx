@@ -5,7 +5,7 @@ import { motion, type HTMLMotionProps } from "framer-motion";
 import Link from "next/link";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
-  variant?: "primary" | "secondary" | "outline" | "ghost";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "gradient";
   size?: "sm" | "md" | "lg";
   href?: string;
   children: React.ReactNode;
@@ -14,12 +14,13 @@ interface ButtonProps extends HTMLMotionProps<"button"> {
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ variant = "primary", size = "md", href, children, className = "", ...props }, ref) => {
     const baseStyles = "inline-flex items-center justify-center font-medium rounded-lg transition-all duration-300 cursor-pointer";
-    
+
     const variants = {
       primary: "bg-sparq-orange text-white hover:bg-sparq-orange-hover shadow-lg hover:shadow-xl",
       secondary: "bg-sparq-cream text-sparq-dark hover:bg-sparq-cream-dark",
       outline: "border-2 border-sparq-orange text-sparq-orange hover:bg-sparq-orange hover:text-white",
       ghost: "text-sparq-white hover:text-sparq-orange hover:bg-white/5",
+      gradient: "bg-gradient-to-r from-sparq-orange to-sparq-orange-hover text-white",
     };
 
     const sizes = {

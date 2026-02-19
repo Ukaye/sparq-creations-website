@@ -8,7 +8,7 @@ const services = [
   "PACKAGING DESIGN",
   "PRINT PRODUCTION",
   "CAMPAIGN CREATIVE",
-  "MESSAGING",
+  "MESSAGING & POSITIONING",
   "VISUAL IDENTITY",
   "DIGITAL MARKETING",
   "BRAND CONSULTING",
@@ -17,9 +17,10 @@ const services = [
 interface ServiceTickerProps {
   variant?: "dark" | "light";
   speed?: number;
+  className?: string;
 }
 
-export default function ServiceTicker({ variant = "dark", speed = 30 }: ServiceTickerProps) {
+export default function ServiceTicker({ variant = "dark", speed = 10, className = "" }: ServiceTickerProps) {
   const textColor = variant === "dark" ? "text-sparq-white" : "text-sparq-dark";
   const borderColor = variant === "dark" ? "border-white/10" : "border-sparq-dark/10";
 
@@ -27,8 +28,8 @@ export default function ServiceTicker({ variant = "dark", speed = 30 }: ServiceT
   const duplicatedServices = [...services, ...services];
 
   return (
-    <div 
-      className={`${borderColor} border-y py-4 overflow-hidden`}
+    <div
+      className={`${borderColor} border-y py-6 overflow-hidden ${className}`}
       style={{
         background: "linear-gradient(90deg, #E5FAFB 0.81%, #D1B686 25%, #F4ECBA 50%, #F6CAA2 75%, #E5FAFB 100%)",
         transform: "rotate(0deg)",
@@ -49,7 +50,7 @@ export default function ServiceTicker({ variant = "dark", speed = 30 }: ServiceT
         {duplicatedServices.map((service, index) => (
           <div key={index} className="flex items-center gap-8">
             <span
-              className={`${textColor} font-display text-lg md:text-xl font-bold tracking-wider`}
+              className={`${textColor} font-display text-lg md:text-2xl font-bold tracking-wider`}
             >
               {service}
             </span>

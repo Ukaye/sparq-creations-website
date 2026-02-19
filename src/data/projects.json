@@ -7,7 +7,11 @@
       "category": "Brand Identity",
       "industry": "Food & Beverage",
       "projectType": "Brand Identity",
-      "deliverables": ["Menu Design", "Brand Identity", "Visual System"],
+      "deliverables": [
+        "Menu Design",
+        "Brand Identity",
+        "Visual System"
+      ],
       "description": "Complete menu and brand identity design for an authentic African cuisine restaurant.",
       "image": "/images/projects/brand-identity.jpg",
       "featured": true
@@ -19,7 +23,10 @@
       "category": "Packaging Design",
       "industry": "Food & Beverage",
       "projectType": "Packaging Design",
-      "deliverables": ["Packaging Design", "Brand Collateral"],
+      "deliverables": [
+        "Packaging Design",
+        "Brand Collateral"
+      ],
       "description": "Premium packaging design for restaurant takeaway and merchandise.",
       "image": "/images/projects/packaging-design.jpg",
       "featured": true
@@ -31,7 +38,11 @@
       "category": "Campaign Assets",
       "industry": "Marketing",
       "projectType": "Campaign Creative",
-      "deliverables": ["Campaign Assets", "Social Media", "Print Materials"],
+      "deliverables": [
+        "Campaign Assets",
+        "Social Media",
+        "Print Materials"
+      ],
       "description": "Full campaign creative suite for brand marketing initiatives.",
       "image": "/images/projects/campaign-assets.jpg",
       "featured": true
@@ -43,7 +54,10 @@
       "category": "Packaging Design",
       "industry": "Consumer Goods",
       "projectType": "Packaging Design",
-      "deliverables": ["Product Packaging", "Label Design"],
+      "deliverables": [
+        "Product Packaging",
+        "Label Design"
+      ],
       "description": "Eye-catching product packaging that stands out on shelves.",
       "image": "/images/projects/packaging-design2.jpg",
       "featured": true
@@ -55,7 +69,11 @@
       "category": "Corporate Branding",
       "industry": "Corporate",
       "projectType": "Corporate Branding",
-      "deliverables": ["Logo Design", "Brand Guidelines", "Stationery"],
+      "deliverables": [
+        "Logo Design",
+        "Brand Guidelines",
+        "Stationery"
+      ],
       "description": "Comprehensive corporate identity and branding system.",
       "image": "/images/projects/corporate-branding.jpg",
       "featured": true
@@ -67,10 +85,13 @@
       "category": "Corporate Branding",
       "industry": "Corporate",
       "projectType": "Corporate Branding",
-      "deliverables": ["Brand Identity", "Marketing Materials"],
+      "deliverables": [
+        "Brand Identity",
+        "Marketing Materials"
+      ],
       "description": "Professional corporate branding for business growth.",
       "image": "/images/projects/corporate-branding2.jpg",
-      "featured": true
+      "featured": false
     },
     {
       "id": "pitch-decks",
@@ -79,7 +100,11 @@
       "category": "Pitch Decks",
       "industry": "Fintech",
       "projectType": "Pitch Deck Design",
-      "deliverables": ["Pitch Deck", "Presentation Design", "Brand Strategy"],
+      "deliverables": [
+        "Pitch Deck",
+        "Presentation Design",
+        "Brand Strategy"
+      ],
       "description": "Compelling pitch deck design for fintech startup fundraising.",
       "image": "/images/projects/pitch-decks.jpg",
       "featured": true
@@ -91,21 +116,12 @@
       "category": "Print & Production",
       "industry": "Various",
       "projectType": "Print Production",
-      "deliverables": ["Print Design", "Production Management"],
+      "deliverables": [
+        "Print Design",
+        "Production Management"
+      ],
       "description": "High-quality print production and materials.",
       "image": "/images/projects/print-production.jpg",
-      "featured": false
-    },
-    {
-      "id": "packaging-design-3",
-      "title": "Luxury Packaging",
-      "subtitle": "Premium Design",
-      "category": "Packaging Design",
-      "industry": "Luxury",
-      "projectType": "Packaging Design",
-      "deliverables": ["Luxury Packaging", "Box Design"],
-      "description": "Premium packaging design for luxury products.",
-      "image": "/images/projects/packaging-design3.jpg",
       "featured": false
     },
     {
@@ -115,9 +131,42 @@
       "category": "Brand Merchandise",
       "industry": "Beauty",
       "projectType": "Brand Merchandise",
-      "deliverables": ["Merchandise Design", "Product Branding"],
+      "deliverables": [
+        "Merchandise Design",
+        "Product Branding"
+      ],
       "description": "Custom brand merchandise and promotional items.",
       "image": "/images/projects/brand-merchandise.jpg",
+      "featured": false
+    },
+    {
+      "id": "brand-merchandise-2",
+      "title": "Custom Merchandise",
+      "subtitle": "Branded Items",
+      "category": "Brand Merchandise",
+      "industry": "Various",
+      "projectType": "Brand Merchandise",
+      "deliverables": [
+        "Merchandise",
+        "Promotional Items"
+      ],
+      "description": "Custom branded merchandise for businesses.",
+      "image": "/images/projects/brand-merchandise2.jpg",
+      "featured": false
+    },
+    {
+      "id": "packaging-design-3",
+      "title": "Luxury Packaging",
+      "subtitle": "Premium Design",
+      "category": "Packaging Design",
+      "industry": "Luxury",
+      "projectType": "Packaging Design 3",
+      "deliverables": [
+        "Luxury Packaging",
+        "Box Design"
+      ],
+      "description": "Premium packaging design for luxury products.",
+      "image": "/images/projects/packaging-design3.jpg",
       "featured": false
     },
     {
@@ -127,7 +176,10 @@
       "category": "Brand Identity",
       "industry": "Various",
       "projectType": "Brand Identity",
-      "deliverables": ["Logo Design", "Visual Identity"],
+      "deliverables": [
+        "Logo Design",
+        "Visual Identity"
+      ],
       "description": "Distinctive visual identity that captures brand essence.",
       "image": "/images/projects/brand-identity2.jpg",
       "featured": false
@@ -139,21 +191,12 @@
       "category": "Recognition Assets",
       "industry": "Corporate",
       "projectType": "Recognition Assets",
-      "deliverables": ["Award Design", "Certificate Design"],
+      "deliverables": [
+        "Award Design",
+        "Certificate Design"
+      ],
       "description": "Custom recognition and award design for achievements.",
       "image": "/images/projects/recognition-assets.jpg",
-      "featured": false
-    },
-    {
-      "id": "brand-merchandise-2",
-      "title": "Custom Merchandise",
-      "subtitle": "Branded Items",
-      "category": "Brand Merchandise",
-      "industry": "Various",
-      "projectType": "Brand Merchandise",
-      "deliverables": ["Merchandise", "Promotional Items"],
-      "description": "Custom branded merchandise for businesses.",
-      "image": "/images/projects/brand-merchandise2.jpg",
       "featured": false
     },
     {
@@ -163,7 +206,11 @@
       "category": "Brand Strategy",
       "industry": "Various",
       "projectType": "Brand Strategy",
-      "deliverables": ["Brand Strategy", "Market Research", "Positioning"],
+      "deliverables": [
+        "Brand Strategy",
+        "Market Research",
+        "Positioning"
+      ],
       "description": "Comprehensive brand strategy for market success.",
       "image": "/images/projects/brand-strategy.jpg",
       "featured": false
@@ -172,13 +219,14 @@
   "categories": [
     "All",
     "Brand Identity",
+    "Print & Production",
     "Packaging Design",
     "Campaign Assets",
     "Corporate Branding",
-    "Print & Production",
     "Recognition Assets",
     "Brand Merchandise",
     "Brand Strategy",
-    "Pitch Decks"
+    "Pitch Decks",
+    "Packagin Design 3"
   ]
 }

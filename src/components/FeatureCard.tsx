@@ -22,13 +22,13 @@ export default function FeatureCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white rounded-lg overflow-hidden group shadow-sm hover:shadow-lg transition-shadow"
+      className="bg-[#1C1C1C] rounded-lg overflow-hidden group shadow-sm hover:shadow-lg border border-transparent hover:border-[#F88A21] transition-all duration-300"
     >
       <div className="p-5 pb-3">
-        <h3 className="font-sans text-base font-bold text-[#E87A20] mb-2">
+        <h3 className="font-sans text-base font-bold text-[#F2F2F0] mb-2">
           {title}
         </h3>
-        <p className="text-sm text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm text-[#F2F2F0] leading-relaxed mb-4">
           {description}
         </p>
         <div className="relative aspect-[16/10] overflow-hidden rounded-sm mb-4">

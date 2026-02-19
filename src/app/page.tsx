@@ -51,10 +51,47 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-[#1A1A1A] pt-40 pb-12 overflow-visible">
         {/* Service Ticker - Overlay on hero, full width */}
-        <div className="absolute bottom-0 left-0 right-0 z-20 w-full">
+        <div
+          className="absolute bottom-6 left-0 right-0 z-20 w-[110%] -ml-[5%]"
+          style={{ transform: 'rotate(-3deg)', transformOrigin: 'center' }}
+        >
           <ServiceTicker variant="light" />
         </div>
-        <div className="container mx-auto px-6 lg:px-12">
+
+        {/* Decorative Circle Top Right */}
+        <div
+          className="absolute top-40 right-25 w-[700px] h-[400px] opacity-50 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 60%)',
+            transform: 'translate(30%, -30%)',
+            zIndex: 0,
+            filter: 'blur(50px)',
+          }}
+        />
+
+        {/* Decorative Circle Top Left */}
+        <div
+          className="absolute top-50 left-30 w-[400px] h-[400px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+            transform: 'translate(-30%, -30%)',
+            zIndex: 0,
+            filter: 'blur(50px)',
+          }}
+        />
+
+        {/* Decorative Circle Bottom Left */}
+        <div
+          className="absolute -bottom-50 left-20 w-[400px] h-[400px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+            transform: 'translate(-30%, -30%)',
+            zIndex: 0,
+            filter: 'blur(50px)',
+          }}
+        />
+
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 relative">
             {/* Hero Content */}
             <motion.div
@@ -68,6 +105,7 @@ export default function Home() {
                 <br />
                 <span className="text-[#E87A20]">UNLEASHING GROWTH</span>
               </h1>
+
               <p className="text-base md:text-lg text-white max-w-xl mb-8 mx-auto lg:mx-0">
                 We are a forward-thinking brand and creative agency dedicated to
                 helping businesses build{" "}
@@ -90,13 +128,13 @@ export default function Home() {
             >
               <div className="relative" style={{ width: '480px', maxWidth: '100%' }}>
                 {/* Sunburst icon behind person */}
-                <div className="absolute inset-0 flex items-center justify-center" style={{ zIndex: 1, left: '20%' }}>
+                <div className="absolute inset-0 flex items-center justify-center top-30 -mr-30" style={{ zIndex: 1 }}>
                   <Image
                     src="/icon.svg"
                     alt="Sparq sunburst"
-                    width={400}
-                    height={400}
-                    className="animate-spin-slow opacity-70"
+                    width={500}
+                    height={500}
+                    className="animate-spin-slow opacity-90"
                   />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden" style={{ zIndex: 2 }}>
@@ -106,7 +144,7 @@ export default function Home() {
                     width={480}
                     height={614}
                     className="object-cover object-center"
-                    style={{ width: '480px', height: '614px' }}
+                    style={{ width: '100%', height: 'auto' }}
                     quality={80}
                     sizes="(max-width: 1024px) 100vw, 480px"
                     priority
@@ -127,12 +165,12 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-center mb-8"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#E87A20]/20 rounded-full text-[#E87A20] text-sm font-medium">
+            <span className="inline-flex items-center gap-6 px-6 py-2 bg-white border border-[#E87A20]/20 rounded-full text-[#E87A20] text-lg font-medium">
               <Image
                 src="/images/icon.svg"
                 alt="Sparq icon"
-                width={16}
-                height={16}
+                width={25}
+                height={25}
                 className="inline-block"
               />
               Selected Works
@@ -151,13 +189,13 @@ export default function Home() {
                 src="/images/selected-works.png"
                 alt="Selected Works Collage"
                 fill
-                className="object-contain transition-transform duration-300 group-hover:scale-105"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
                 quality={75}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
                 priority
               />
               {/* Overlay with button on hover */}
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <Button href="/work" variant="primary">
                   View Our Works
                 </Button>
@@ -168,23 +206,42 @@ export default function Home() {
       </section>
 
       {/* Our Edge Section */}
-      <section className="py-16 bg-[#F5F0E8]">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-16 bg-[#101010] relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-sans text-[#1A1A1A] mb-4 text-center" style={{ fontSize: '40px', fontWeight: 600, lineHeight: '56px', letterSpacing: '0%' }}>
+            <h2 className="font-sans text-[#F2F2F0] mb-4 text-center" style={{ fontSize: '40px', fontWeight: 600, lineHeight: '56px', letterSpacing: '0%' }}>
               Our Edge
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-            We don't start with visuals. We start with understanding your business, your audience, and your goals. 
-            Then we build the brand that connects to both heart and logic.
+            <p className="text-[#F2F2F0] max-w-2xl mx-auto text-sm md:text-base">
+              We don't start with visuals. We start with understanding your business, your audience, and your goals.
+              Then we build the brand that connects to both heart and logic.
             </p>
           </motion.div>
 
+          <div
+            className="absolute top-20 left-20 w-[400px] h-[400px] opacity-30 pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+              transform: 'translate(-30%, -30%)',
+              zIndex: -1,
+              filter: 'blur(50px)',
+            }}
+          />
+
+          <div
+            className="absolute bottom-80 -right-80 w-[600px] h-[600px] opacity-40 pointer-events-none"
+            style={{
+              background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+              transform: 'translate(-30%, 30%)',
+              zIndex: -1,
+              filter: 'blur(80px)',
+            }}
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.map((feature, index) => (
               <FeatureCard
@@ -200,8 +257,30 @@ export default function Home() {
       </section>
 
       {/* Africa Section */}
-      <section className="py-20 bg-[#1A1A1A] relative overflow-hidden">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-20 bg-[#101010] relative overflow-hidden">
+        {/* Decorative Circle Top Left */}
+        <div
+          className="absolute top-20 left-10 w-[250px] h-[250px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+            transform: 'translate(-30%, -30%)',
+            zIndex: 0,
+            filter: 'blur(60px)',
+          }}
+        />
+
+        {/* Decorative Circle Bottom Right */}
+        <div
+          className="absolute bottom-30 right-30 w-[250px] h-[250px] opacity-25 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 90%)',
+            transform: 'translate(30%, 30%)',
+            zIndex: 0,
+            filter: 'blur(80px)',
+          }}
+        />
+
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Content */}
             <motion.div
@@ -210,6 +289,7 @@ export default function Home() {
               viewport={{ once: true }}
               className="flex-1 lg:max-w-md"
             >
+
               <h2 className="font-sans text-3xl md:text-4xl font-bold text-white mb-4">
                 World-class brand development, built for{" "}
                 <span className="text-[#E87A20]">Africa and beyond.</span>
