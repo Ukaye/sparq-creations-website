@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui";
-import PortfolioGrid from "@/components/PortfolioGrid";
-import ServiceTicker from "@/components/ServiceTicker";
+import { Button, ServiceTicker, PortfolioGrid } from "@/components";
 
 const brandValues = [
   {
@@ -33,20 +31,20 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="pt-28 pb-12 bg-sparq-cream">
+      <section className="pt-28 pb-12 bg-sparq-white">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="max-w-md"
+              className="max-w-2xl"
             >
-              <h1 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-sparq-dark mb-4">
+              <h1 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-sparq-dark mt-20 mb-4">
                 <span className="text-sparq-orange">Our Work:</span>{" "}
-                <span className="font-normal">The Proof is in the Process</span>
+                <span className="font-semibold">The Proof is in the <br /> Process</span>
               </h1>
-              <Button href="/contact" variant="primary" size="md">
+              <Button href="/contact" variant="primary" size="md" >
                 Get a Quote
               </Button>
             </motion.div>
@@ -57,7 +55,7 @@ export default function WorkPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="max-w-sm"
             >
-              <p className="text-sparq-gray-dark text-sm">
+              <p className="text-sparq-gray-dark text-md mt-20">
                 We do more than branding, we engineer{" "}
                 <span className="font-semibold text-sparq-dark">relevance</span>.
                 We bridge business goals with{" "}
@@ -71,25 +69,59 @@ export default function WorkPage() {
       </section>
 
       {/* Portfolio Grid Section */}
-      <section className="py-8 bg-sparq-cream">
-        <div className="container mx-auto px-6 lg:px-12">
-          <PortfolioGrid showFilters />
+      <section className="py-8 bg-sparq-white">
+        <div className="container mx-auto px-6 lg:px-12 -mb-80">
+          <PortfolioGrid />
         </div>
       </section>
+
 
       {/* Service Ticker */}
       <ServiceTicker variant="light" />
 
       {/* Brand Values Section */}
-      <section className="py-16 bg-sparq-dark">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="py-16 bg-[#101010] relative overflow-hidden">
+        {/* Decorative Circle Top Right */}
+        <div
+          className="absolute top-0 right-50 w-[600px] h-[600px] opacity-20 pointer-events-none mix-blend-screen"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(30%, -30%)',
+            zIndex: 0,
+            filter: 'blur(60px)',
+          }}
+        />
+
+        {/* Decorative Circle Top Left */}
+        <div
+          className="absolute top-0 left-50 w-[600px] h-[600px] opacity-20 pointer-events-none mix-blend-screen"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(-30%, -20%)',
+            zIndex: 0,
+            filter: 'blur(60px)',
+          }}
+        />
+
+        {/* Decorative Circle Bottom Center */}
+        <div
+          className="absolute bottom-0 left-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none mix-blend-screen"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(-50%, 40%)',
+            zIndex: 0,
+            filter: 'blur(80px)',
+          }}
+        />
+
+        <div className="container mx-auto px-6 lg:px-12 mt-10 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-white">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-sparq-white">
               Our Brand{" "}
               <span className="text-sparq-orange">Values</span>
             </h2>
@@ -98,7 +130,7 @@ export default function WorkPage() {
           {/* Values Grid - Pyramid Layout */}
           <div className="max-w-3xl mx-auto">
             {/* First Row - 3 items */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4">
               {brandValues.slice(0, 3).map((value, index) => (
                 <motion.div
                   key={value.title}
@@ -106,11 +138,11 @@ export default function WorkPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                className="rounded-xl p-5 text-center"
-                style={{
-                  background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
-                  boxShadow: "0px 4px 4px 0px #00000040",
-                }}
+                  className="rounded-lg p-9 text-center"
+                  style={{
+                    background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
+                    boxShadow: "0px 4px 4px 0px #00000040",
+                  }}
                 >
                   <Image
                     src="/images/icon.svg"
@@ -119,16 +151,16 @@ export default function WorkPage() {
                     height={24}
                     className="mx-auto mb-2"
                   />
-                  <h3 className="font-sans text-base font-bold text-sparq-white mb-1">
+                  <h3 className="font-sans text-xl font-bold text-sparq-white mb-1">
                     {value.title}
                   </h3>
-                  <p className="text-sparq-gray text-xs">{value.description}</p>
+                  <p className="text-sparq-white text-md font-normal">{value.description}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Second Row - 2 items centered */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-lg mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-xl mx-auto">
               {brandValues.slice(3, 5).map((value, index) => (
                 <motion.div
                   key={value.title}
@@ -136,11 +168,12 @@ export default function WorkPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (index + 3) * 0.1 }}
-                className="rounded-xl p-5 text-center"
-                style={{
-                  background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
-                  boxShadow: "0px 4px 4px 0px #00000040",
-                }}
+                  className="rounded-xl p-9 text-center"
+                  style={{
+                    background: "linear-gradient(180deg, #181818 0%, #191919 100%)",
+                    boxShadow: "0px 4px 4px 0px #00000040",
+                  }}
+
                 >
                   <Image
                     src="/images/icon.svg"
@@ -149,10 +182,10 @@ export default function WorkPage() {
                     height={24}
                     className="mx-auto mb-2"
                   />
-                  <h3 className="font-sans text-base font-bold text-sparq-white mb-1">
+                  <h3 className="font-sans text-xl font-bold text-sparq-white mb-1">
                     {value.title}
                   </h3>
-                  <p className="text-sparq-gray text-xs">{value.description}</p>
+                  <p className="text-sparq-white text-md">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -161,7 +194,7 @@ export default function WorkPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-30 overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -172,7 +205,7 @@ export default function WorkPage() {
             quality={70}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-sparq-dark/70" />
+          <div className="absolute inset-0 bg-sparq-white/40" />
         </div>
 
         <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -180,15 +213,15 @@ export default function WorkPage() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="max-w-md mx-auto text-center bg-sparq-dark/90 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+            className="max-w-6xl mx-auto text-center bg-sparq-dark/90 backdrop-blur-sm rounded-xl p-8 border border-white/10"
           >
-            <h2 className="font-sans text-xl md:text-2xl font-bold text-sparq-white mb-1">
+            <h2 className="font-sans text-xl md:text-5xl font-semibold text-sparq-white mt-4 mb-3">
               Ready to Make your Brand
             </h2>
-            <h3 className="font-sans text-xl md:text-2xl font-bold text-sparq-orange mb-6">
+            <h3 className="font-sans text-xl md:text-5xl font-semibold text-sparq-orange mb-6">
               Unforgettable?
             </h3>
-            <Button href="/contact" variant="primary" size="md">
+            <Button href="/contact" variant="gradient" size="lg">
               Book a Consultation
             </Button>
             {/* Decorative squiggle */}
@@ -196,17 +229,14 @@ export default function WorkPage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
-              className="absolute -right-2 bottom-6"
+              className="absolute right-76 bottom-5"
             >
-              <svg width="50" height="30" viewBox="0 0 50 30" fill="none">
-                <path
-                  d="M5 15 Q15 5 25 15 Q35 25 45 15"
-                  stroke="#E87A20"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  fill="none"
-                />
-              </svg>
+              <Image
+                src="/images/vectors/vector11.png"
+                alt=""
+                width={150}
+                height={150}
+              />
             </motion.div>
           </motion.div>
         </div>
