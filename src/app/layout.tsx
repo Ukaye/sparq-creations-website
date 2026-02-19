@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Noto_Sans, Hanken_Grotesk } from "next/font/google";
+import { Playfair_Display, Noto_Sans, Hanken_Grotesk, Gloock } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +9,13 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const gloock = Gloock({
+  variable: "--font-gloock",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400"],
 });
 
 const notoSans = Noto_Sans({
@@ -45,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${playfair.variable} ${notoSans.variable} ${hankenGrotesk.variable} antialiased`}
+        className={`${playfair.variable} ${notoSans.variable} ${hankenGrotesk.variable} ${gloock.variable} antialiased`}
       >
         <Header />
         <main>{children}</main>

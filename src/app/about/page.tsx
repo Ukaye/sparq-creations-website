@@ -62,31 +62,31 @@ const processSteps = [
     number: "01",
     title: "Discovery & Insights Gathering",
     description: "Understanding your business, audience, culture and goals.",
-    icon: "🔍",
+    icon: "/images/discovery.png",
   },
   {
     number: "02",
     title: "Strategy Development",
     description: "Crafting a clear strategic direction, messaging and positioning.",
-    icon: "📋",
+    icon: "/images/strategy.png",
   },
   {
     number: "03",
     title: "Creative Expression",
     description: "Transforming strategy into visuals, stories, and experiences.",
-    icon: "💡",
+    icon: "/images/creative.png",
   },
   {
     number: "04",
     title: "Execution & Deployment",
     description: "Bringing the brand to life across digital and physical platforms.",
-    icon: "🚀",
+    icon: "/images/execution.png",
   },
   {
     number: "05",
     title: "Optimization & Support",
     description: "Ongoing improvement and support to ensure long-term growth.",
-    icon: "⚙️",
+    icon: "/images/support.png",
   },
 ];
 
@@ -95,16 +95,19 @@ const values = [
     title: "OUR PURPOSE",
     description:
       "To empower individuals and businesses with the creative intelligence and strategic clarity required to build brands that inspire loyalty, influence decisions, and drive growth.",
+    icon: "/images/purpose.png",
   },
   {
     title: "OUR VISION",
     description:
       "To become Africa's leading brand and creative partner for businesses seeking to build through authentic connections and meaningful brand experiences.",
+    icon: "/images/vision.png",
   },
   {
     title: "OUR MISSION",
     description:
       "To craft impactful brand identities, compelling content, and immersive digital experiences that connect businesses to their audiences with clarity, relevance, and emotional resonance.",
+    icon: "/images/mission.png",
   },
 ];
 
@@ -112,19 +115,46 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-50 pb-24 bg-sparq-dark overflow-hidden min-h-[40vh] flex items-center">
+      <section className="relative pt-100 pb-30 bg-[#101010] overflow-hidden min-h-[60vh] flex items-center">
+        {/* Decorative Gradient Circles */}
+        <div
+          className="absolute top-40 left-60 w-[600px] h-[600px] opacity-20 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(-30%, -50%)',
+            zIndex: 0,
+            filter: 'blur(60px)',
+          }}
+        />
+        <div
+          className="absolute top-40 right-60 w-[600px] h-[600px] opacity-20 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(30%, -50%)',
+            zIndex: 0,
+            filter: 'blur(60px)',
+          }}
+        />
+        <div
+          className="absolute -bottom-6 left-1/2 w-[500px] h-[500px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(-50%, 40%)',
+            zIndex: 0,
+            filter: 'blur(80px)',
+          }}
+        />
         {/* Decorative elements */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="absolute top-20 left-1/2 transform -translate-x-1/2"
+          className="absolute top-30 left-1/2 transform -translate-x-1/2"
         >
           <Image
-            src="/images/vectors/vector10.svg"
+            src="/images/vectors/vector1.svg"
             alt=""
-            width={45}
-            height={59}
-            className="opacity-60"
+            width={80}
+            height={80}
           />
         </motion.div>
 
@@ -133,40 +163,150 @@ export default function AboutPage() {
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
-          className="absolute top-24 right-1/4"
+          className="absolute top-48 left-81"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="#E87A20">
-            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-          </svg>
+          <Image
+            src="/images/vectors/vector2.svg"
+            alt=""
+            width={90}
+            height={90}
+          />
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.5 }}
-          className="absolute top-32 left-1/4"
+          className="absolute top-55 left-125"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#E87A20" opacity="0.6">
-            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-          </svg>
+          <Image
+            src="/images/vectors/vector3.svg"
+            alt=""
+            width={60}
+            height={60}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-70 left-70"
+        >
+          <Image
+            src="/images/vectors/vector7.svg"
+            alt=""
+            width={60}
+            height={60}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-35 left-90"
+        >
+          <Image
+            src="/images/vectors/vector8.svg"
+            alt=""
+            width={90}
+            height={90}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-25 right-180"
+        >
+          <Image
+            src="/images/vectors/vector9.svg"
+            alt=""
+            width={60}
+            height={60}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute top-52 right-120"
+        >
+          <Image
+            src="/images/vectors/vector4.svg"
+            alt=""
+            width={70}
+            height={70}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute top-60 right-75"
+        >
+          <Image
+            src="/images/vectors/vector5.svg"
+            alt=""
+            width={90}
+            height={90}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-80 right-70"
+        >
+          <Image
+            src="/images/vectors/vector6.svg"
+            alt=""
+            width={60}
+            height={60}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-20 right-130"
+        >
+          <Image
+            src="/images/vectors/vector10.svg"
+            alt=""
+            width={40}
+            height={40}
+          />
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.5 }}
+          className="absolute bottom-40 right-100"
+        >
+          <Image
+            src="/images/vectors/vector11.svg"
+            alt=""
+            width={50}
+            height={50}
+          />
         </motion.div>
 
-        <div className="container mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="container mx-auto -top-30 px-6 lg:px-12 text-center relative z-10">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-lg md:text-xl lg:text-2xl text-sparq-gray max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl lg:text-3xl text-[#FFFFFF] max-w-3xl mx-auto leading-relaxed"
           >
             We{" "}
-            <span className="text-sparq-orange font-semibold italic">transform</span>{" "}
-            brands into powerful storytellers through strategy, creativity, and
-            design, shaping how they are perceived, experienced, and remembered.
+            <span className="text-[#F88A21] font-normal">transform</span>{" "}
+            brands into powerful storytellers <br /> through strategy, creativity, and
+            design, shaping <br /> how they are perceived, experienced, and <br /> remembered.
           </motion.p>
         </div>
       </section>
 
       {/* What We Do Section */}
-      <section className="py-16 bg-sparq-cream">
+      <section className="py-16 bg-[#FFFFFF]">
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -174,13 +314,13 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-dark">
+            <h2 className="font-sans text-3xl md:text-4xl font-bold text-[#F88A21]">
               WHAT WE DO
             </h2>
           </motion.div>
 
           {/* First 4 cards in 2-column grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-8xl mx-auto">
             {services.slice(0, 4).map((service, index) => (
               <motion.div
                 key={service.category}
@@ -188,18 +328,18 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-[#FBFAF8] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
               >
-                <h3 className="font-sans text-sm font-bold mb-3 text-sparq-orange">
+                <h3 className="font-sans text-xl font-bold mb-6 text-[#F88A21]">
                   {service.category}
                 </h3>
-                <ul className="space-y-1.5">
+                <ul className="space-y-3">
                   {service.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-sparq-gray-dark text-sm"
+                      className="flex items-start gap-4 text-[#101010] text-lg"
                     >
-                      <span className="text-sparq-orange mt-1.5 text-xs">•</span>
+                      <span className="text-sparq-[#F88A21] mt-1.5 text-xs">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -207,9 +347,9 @@ export default function AboutPage() {
               </motion.div>
             ))}
           </div>
-          
+
           {/* Last card centered */}
-          <div className="flex justify-center mt-6 max-w-4xl mx-auto">
+          <div className="flex justify-center mt-10 max-w-8xl mx-auto">
             {services.slice(4).map((service, index) => (
               <motion.div
                 key={service.category}
@@ -217,18 +357,18 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
-                className="bg-white rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow w-full md:w-1/2"
+                className="bg-[#FBFAF8] rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow w-full md:w-1/2"
               >
-                <h3 className="font-sans text-sm font-bold mb-3 text-sparq-orange">
+                <h3 className="font-sans text-xl font-bold mb-6 text-[#F88A21]">
                   {service.category}
                 </h3>
-                <ul className="space-y-1.5">
+                <ul className="space-y-3">
                   {service.items.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-2 text-sparq-gray-dark text-sm"
+                      className="flex items-start gap-4 text-[#101010] text-lg"
                     >
-                      <span className="text-sparq-orange mt-1.5 text-xs">•</span>
+                      <span className="text-sparq-[#F88A21] mt-1.5 text-xs">•</span>
                       <span>{item}</span>
                     </li>
                   ))}
@@ -240,22 +380,21 @@ export default function AboutPage() {
       </section>
 
       {/* Mission, Vision, Purpose Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-40 overflow-hidden min-h-[95vh] flex items-center">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
             src="/images/office-image.png"
             alt="Office"
             fill
-            className="object-cover"
+            className="object-cover opacity-50"
             quality={70}
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-sparq-dark/85" />
         </div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="container mx-auto max-w-[1300px] px-6 lg:px-12 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {values.map((value, index) => (
               <motion.div
                 key={value.title}
@@ -263,12 +402,24 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="text-center"
+                className="text-center p-6 rounded-2xl border border-white/20 backdrop-blur-md"
+                style={{
+                  background: 'linear-gradient(90deg, rgba(248, 138, 33, 0.4) 0%, rgba(215, 107, 16, 0.4) 50%)'
+                }}
               >
-                <h3 className="font-sans text-sm font-bold text-sparq-orange mb-3 tracking-wider">
+                <div className="flex justify-start mb-6">
+                  <Image
+                    src={value.icon}
+                    alt={value.title}
+                    width={50}
+                    height={50}
+                    className="object-contain"
+                  />
+                </div>
+                <h3 className="font-gloock text-left text-2xl font-bold text-[#F2F2F0] mb-4 tracking-wider">
                   {value.title}
                 </h3>
-                <p className="text-sparq-gray text-sm leading-relaxed">
+                <p className="text-[#F2F2F0] text-left text-xl leading-relaxed">
                   {value.description}
                 </p>
               </motion.div>
@@ -278,19 +429,38 @@ export default function AboutPage() {
       </section>
 
       {/* Our Approach Section */}
-      <section className="py-16 bg-sparq-dark">
-        <div className="container mx-auto px-6 lg:px-12">
+      <section className="relative py-16 bg-[#101010] overflow-hidden">
+        {/* Decorative Glows */}
+        <div
+          className="absolute top-70 left-50 w-[500px] h-[500px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(-40%, -40%)',
+            zIndex: 0,
+            filter: 'blur(80px)',
+          }}
+        />
+        <div
+          className="absolute bottom-90 right-60 w-[500px] h-[500px] opacity-30 pointer-events-none"
+          style={{
+            background: 'radial-gradient(circle, #F3851F 0%, rgba(243, 133, 31, 0) 70%)',
+            transform: 'translate(40%, 40%)',
+            zIndex: 0,
+            filter: 'blur(80px)',
+          }}
+        />
+        <div className="container mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="font-sans text-2xl md:text-3xl font-bold text-sparq-white mb-3">
+            <h2 className="font-sans text-4xl md:text-4xl font-bold text-sparq-white mb-3">
               Our Approach:{" "}
               <span className="text-sparq-orange">Clarity</span> in Every Step
             </h2>
-            <p className="text-sparq-gray max-w-xl mx-auto text-sm">
+            <p className="text-[#F2F2F0] max-w-4xl font-noto-sans font-normal mx-auto text-xl">
               We transform ambition into clarity through a proven five-phase methodology designed for sustainable growth.
             </p>
           </motion.div>
@@ -298,8 +468,8 @@ export default function AboutPage() {
           {/* Process Steps - Zigzag Layout with Cards and Timeline */}
           <div className="relative max-w-4xl mx-auto">
             {/* Vertical Timeline Line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sparq-orange/20 via-sparq-orange/40 to-sparq-orange/20 hidden md:block" style={{ transform: 'translateX(-50%)' }} />
-            
+            <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-[#D1B686] via-[#F4ECBA] to-[#F4ECBA] hidden md:block" style={{ transform: 'translateX(-50%)' }} />
+
             <div className="space-y-8 md:space-y-12">
               {processSteps.map((step, index) => (
                 <motion.div
@@ -308,60 +478,53 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.15 }}
-                  className={`relative flex ${
-                    index % 2 === 0 ? "justify-start md:pr-[60%]" : "justify-end md:pl-[60%]"
-                  }`}
+                  className={`relative flex ${index % 2 === 0 ? "justify-start md:pr-[56%]" : "justify-end md:pl-[56%]"
+                    }`}
                 >
-                {/* Timeline Icon */}
-                <div
-                  className="absolute left-1/2 top-1/2 hidden md:block"
-                  style={{ transform: "translate(-50%, -50%)" }}
-                >
-                  <Image
-                    src="/images/icon.svg"
-                    alt="Timeline marker"
-                    width={48}
-                    height={48}
-                    className="opacity-80"
+                  {/* Timeline Icon */}
+                  <div
+                    className="absolute left-1/2 top-1/2 hidden md:block"
+                    style={{ transform: "translate(-50%, -50%)" }}
+                  >
+                    <Image
+                      src="/images/icon.svg"
+                      alt="Timeline marker"
+                      width={48}
+                      height={48}
+                      className="opacity-80"
+                    />
+                  </div>
+
+                  {/* Horizontal Connector Line */}
+                  <div
+                    className={`absolute top-1/2 hidden md:block ${index % 2 === 0
+                      ? "right-[calc(50%+18px)] left-auto"
+                      : "left-[calc(50%+18px)] right-auto"
+                      }`}
+                    style={{
+                      transform: "translateY(-50%)",
+                      width: "clamp(36px, 1vw, 190px)",
+                      borderTop: "1px solid rgba(244, 236, 186, 1)",
+                    }}
                   />
-                </div>
-                
-                {/* Horizontal Connector Line */}
-                <div
-                  className={`absolute top-1/2 hidden md:block ${
-                    index % 2 === 0
-                      ? "right-[calc(50%+24px)] left-auto"
-                      : "left-[calc(50%+24px)] right-auto"
-                  }`}
-                  style={{
-                    transform: "translateY(-50%)",
-                    width: "clamp(40px, 8vw, 120px)",
-                    borderTop: "2px solid rgba(232, 122, 32, 0.3)",
-                  }}
-                />
-                  
+
                   {/* Card */}
-                  <div className={`bg-white/5 border border-white/10 rounded-2xl p-6 w-full md:max-w-[320px] ${
-                    index % 2 === 0 ? "" : "text-right"
-                  }`}>
+                  <div className="bg-[#221911] border border-[#D1B686] rounded-xl p-6 w-full md:max-w-[400px]">
                     {/* Icon Box */}
-                    <div className={`w-14 h-14 bg-sparq-dark border border-sparq-orange/30 rounded-xl flex items-center justify-center mb-4 ${
-                      index % 2 === 0 ? "" : "ml-auto"
-                    }`}>
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E87A20" strokeWidth="1.5">
-                        {index === 0 && <><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></>}
-                        {index === 1 && <><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></>}
-                        {index === 2 && <><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></>}
-                        {index === 3 && <><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></>}
-                        {index === 4 && <><circle cx="12" cy="12" r="3"/><path d="M12 1v2m0 18v2m11-11h-2M3 12H1m17.07-7.07l-1.41 1.41M6.34 17.66l-1.41 1.41m12.02 0l-1.41-1.41M6.34 6.34L4.93 4.93"/></>}
-                      </svg>
-                    </div>
+                    <Image
+                      src={step.icon}
+                      alt={step.title}
+                      width={30}
+                      height={30}
+                      className="object-contain mb-5"
+                    />
+
 
                     {/* Content */}
-                    <h3 className="font-sans text-lg font-bold text-sparq-orange mb-2">
+                    <h3 className="font-sans text-xl font-bold text-[#F88A21] mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-sparq-gray text-sm leading-relaxed">{step.description}</p>
+                    <p className="text-[#F2F2F0] text-lg font-noto-sans font-weight-normal leading-relaxed">{step.description}</p>
                   </div>
                 </motion.div>
               ))}

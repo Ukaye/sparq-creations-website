@@ -11,7 +11,7 @@
   --sparq-gray-light: #F5F5F5;
   --sparq-gray: #949494;
   --sparq-gray-dark: #666666;
-  
+
   /* Semantic colors */
   --background: var(--sparq-dark);
   --foreground: var(--sparq-white);
@@ -33,8 +33,9 @@
   --color-sparq-gray-dark: var(--sparq-gray-dark);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-noto-sans);
-  --font-display: var(--font-playfair);
+  --font-hanken-grotesk: var(--font-hanken-grotesk);
+  --font-gloock: var(--font-gloock);
+  --color-sparq-dark: var(--sparq-dark);
 }
 
 * {
@@ -76,25 +77,32 @@ body {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
 }
 
 @keyframes sparkle {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.5;
     transform: scale(0.8);
@@ -102,9 +110,12 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px rgba(232, 122, 32, 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px rgba(232, 122, 32, 0.6);
   }
@@ -130,6 +141,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -142,6 +154,10 @@ body {
 /* Typography utilities */
 .font-display {
   font-family: var(--font-playfair), Georgia, serif;
+}
+
+.font-gloock {
+  font-family: var(--font-gloock), serif;
 }
 
 /* Gradient backgrounds */
